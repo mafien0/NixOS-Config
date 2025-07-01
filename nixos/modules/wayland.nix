@@ -1,22 +1,41 @@
-{ pkgs, ... }:
-{
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
-  };
+{ pkgs, ... }: {
 
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      common.default = [ "gtk" ];
-      hyprland.default = [
-        "gtk"
-        "hyprland"
-      ];
-    };
+	environment.systemPackages = with pkgs; [
+		niri
+    kitty
 
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+		swaylock
+		swaybg
+		swaynotificationcenter
+		waypaper
+		waybar
+
+		gnome-keyring
+		cliphist
+		wl-clipboard
+		xwayland-satellite
+
+		xdg-desktop-portal-gnome
+		xdg-desktop-portal-gtk
+		gnome-keyring
+	];
+
+	programs.niri.enable = true;
+
+	xdg.portal = {
+		enable = true;
+		xdgOpenUsePortal = true;
+		config = {
+			common = {
+				default = ["gnome" "gtk"];
+				"org.freedesktop.impl.portal.ScreenCast" = "gnome";
+				"org.freedesktop.impl.portal.Screenshot" = "gnome";
+				"org.freedesktop.impl.portal.RemoteDesktop" = "gnome";
+			};
+		};
+		extraPortals = [
+			pkgs.xdg-desktop-portal-gtk
+			pkgs.xdg-desktop-portal-gnome
+		];
+	};
 }

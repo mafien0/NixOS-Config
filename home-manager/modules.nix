@@ -3,8 +3,6 @@
     ./modules/theme
 		./modules/defaultApps.nix
 
-    ./modules/hyprland
-    #    ./modules/hyprpanel
     ./modules/waypaper
     ./modules/rofi
     ./modules/kitty

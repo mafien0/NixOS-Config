@@ -1,14 +1,14 @@
 { pkgs, ... }: {
 
 	environment.systemPackages = with pkgs; [
-		# Temp
-		niri
 
 		# Desktop apps
 		obs-studio
 		prismlauncher
 		pwvucontrol
-		telegram-desktop
+		materialgram
+		cinny-desktop
+		protonvpn-gui
 		mpv
 		filezilla
 
@@ -35,15 +35,6 @@
 		wget
 		zip
 		lua
-
-		# Wayland stuff
-		cliphist
-		wl-clipboard
-		xwayland
-
-		# Screenshotting
-		grim
-		slurp
 
 		# Other
 		gcc
