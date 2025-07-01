@@ -3,6 +3,7 @@
     ./modules/theme
 		./modules/defaultApps.nix
 
+		./modules/niri
     ./modules/waypaper
     ./modules/rofi
     ./modules/kitty

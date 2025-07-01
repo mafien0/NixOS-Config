@@ -1,0 +1,240 @@
+// Incomplete
+
+// Input(Keyboard, mouse)
+input {
+	warp-mouse-to-focus
+	focus-follows-mouse
+	keyboard {
+		numlock
+		xkb {
+			layout "us,ru"
+			options "grp:alt_shift_toggle,caps:escape,"
+		}
+	}
+}
+
+// Output(Monitor)
+output "HDMI-A-1" {
+	mode "1920x1080@74.986"
+	scale 1
+	transform "normal"
+	focus-at-startup
+}
+
+// Layout(Decorations, etc)
+layout {
+	gaps 12
+	center-focused-column "never"
+
+	preset-column-widths {
+		proportion 0.33333
+		proportion 0.5
+		proportion 0.66667
+	}
+
+	default-column-width { proportion 0.5; }
+
+	focus-ring {
+		width 2
+		active-color "#b4befe"
+		inactive-color "#313244"
+	}
+
+	shadow {
+		on
+		draw-behind-window true
+		softness 30
+		spread 3
+		offset x=0 y=5
+		color "#0007"
+	}
+}
+
+// ScreenCasting fix
+debug {
+    wait-for-frame-completion-in-pipewire
+}
+
+// Rounded corners
+window-rule {
+	geometry-corner-radius 5
+	clip-to-geometry true
+}
+
+// Xwayland support
+environment {
+	DISPLAY ":0"
+	ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
+// Startup
+//spawn-at-startup "waybar"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "waypaper" "--restore"
+// Fix that at launch volume is set to 100%
+spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
+spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+// Clipboard history
+spawn-at-startup  "bash" "-c" "cliphist wipe"
+spawn-at-startup  "bash" "-c" "wl-paste --type text --watch cliphist store"
+
+
+// animations
+animations {
+	slowdown 1.0 // None
+}
+
+// Misc
+screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// Binds
+binds {
+	Mod+Shift+Slash { show-hotkey-overlay; }
+
+	Mod+C { close-window; }
+	Mod+O repeat=false { toggle-overview; }
+
+	// Float
+	Mod+V       { toggle-window-floating; }
+	Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+	// Windows (not that shit microsoft thing)
+	Mod+D { switch-preset-column-width; }
+	Mod+Shift+D { switch-preset-window-height; }
+	Mod+Ctrl+D { reset-window-height; }
+	Mod+F { maximize-column; }
+	Mod+Shift+F { fullscreen-window; }
+
+	// Applications
+	Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+	Mod+B hotkey-overlay-title="Open browser: firefox" { spawn "firefox";}
+	Mod+E hotkey-overlay-title="Open file manager: nautilus" { spawn "nautilus";}
+	Mod+T hotkey-overlay-title="Open calc" { spawn "gnome-calculator";}
+	Mod+Z hotkey-overlay-title="Open discord" { spawn "vesktop";}
+
+	// Rofi
+	Mod+R hotkey-overlay-title="Application Laucnher: rofi" { spawn "rofi" "-show" "drun"; }
+	Mod+U hotkey-overlay-title="Clipboard history: bemoji" { spawn "bash" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+	Mod+apostrophe hotkey-overlay-title="Emoji picker: bemoji+rofi" { spawn "bemoji"; }
+
+	// Lock screen
+	Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+	// ScreenShots
+
+	Win+Shift+S { screenshot; }
+	Print { screenshot-screen; }
+	Alt+Print { screenshot-window; }
+
+	// ScreenCast
+	Mod+I { set-dynamic-cast-window; }
+	Mod+P { clear-dynamic-cast-target; }
+
+	// Focus
+	Mod+H     { focus-column-left; }
+	Mod+J     { focus-window-or-workspace-down; }
+	Mod+K     { focus-window-or-workspace-up; }
+	Mod+L     { focus-column-right; }
+
+	// Move windows
+	Mod+Ctrl+H     { move-column-left; }
+	Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+	Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+	Mod+Ctrl+L     { move-column-right; }
+
+	// Move active window into and out of column
+	Mod+BracketLeft  { consume-or-expel-window-left; }
+	Mod+BracketRight { consume-or-expel-window-right; }
+	// Move window in and out of columns
+	Mod+Comma  { consume-window-into-column; }
+	Mod+Period { expel-window-from-column; }
+
+	// Expand window focused to available space
+	Mod+Ctrl+F { expand-column-to-available-width; }
+
+	// Center column
+	Mod+A { center-column; }
+	// Center all fully visible columns on screen.
+	Mod+Ctrl+A { center-visible-columns; }
+
+	// First and last column's
+	Mod+G { focus-column-first; }
+	Mod+Shift+G  { focus-column-last; }
+	Mod+Ctrl+G { move-column-to-first; }
+	Mod+Ctrl+Shift+G { move-column-to-last; }
+
+	// Resize windows and columns
+	Mod+Minus { set-column-width "-10%"; }
+	Mod+Equal { set-column-width "+10%"; }
+	Mod+Shift+Minus { set-window-height "-10%"; }
+	Mod+Shift+Equal { set-window-height "+10%"; }
+
+	// Workspaces
+	Mod+1 { focus-workspace 1; }
+	Mod+2 { focus-workspace 2; }
+	Mod+3 { focus-workspace 3; }
+	Mod+4 { focus-workspace 4; }
+	Mod+5 { focus-workspace 5; }
+	Mod+6 { focus-workspace 6; }
+	Mod+7 { focus-workspace 7; }
+	Mod+8 { focus-workspace 8; }
+	Mod+9 { focus-workspace 9; }
+	Mod+Ctrl+1 { move-window-to-workspace 1; }
+	Mod+Ctrl+2 { move-window-to-workspace 2; }
+	Mod+Ctrl+3 { move-window-to-workspace 3; }
+	Mod+Ctrl+4 { move-window-to-workspace 4; }
+	Mod+Ctrl+5 { move-window-to-workspace 5; }
+	Mod+Ctrl+6 { move-window-to-workspace 6; }
+	Mod+Ctrl+7 { move-window-to-workspace 7; }
+	Mod+Ctrl+8 { move-window-to-workspace 8; }
+	Mod+Ctrl+9 { move-window-to-workspace 9; }
+
+	// Tabs
+	Mod+W { toggle-column-tabbed-display; }
+
+	// Mouse binds
+	Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+	Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+
+	// Idk what it does
+	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+	// Quit
+	Mod+Shift+E { quit; }
+	Ctrl+Alt+Delete { quit; }
+
+	XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+	XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+	XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+	XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+}
+
+// Window rules
+
+// Firefox PiP
+window-rule {
+	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+	open-floating true
+	clip-to-geometry false 
+	focus-ring { off; }
+	shadow { off; }
+}
+
+// Calculator
+window-rule {
+	match app-id=r#"org.gnome.Calculator$"#
+	open-floating true
+	min-width 400
+	min-height 600
+}
+
+// Waypaper
+window-rule {
+	match app-id=r#"waypaper$"#
+	open-floating true
+}
