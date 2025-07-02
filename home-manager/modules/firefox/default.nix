@@ -65,8 +65,8 @@ in {
 
       ExtensionSettings = {
 # Theme
-        "{8446b178-c865-4f5c-8ccc-1d7887811ae3}" = { # catppuccin mocha lavender theme
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-lavender-git/latest.xpi";
+        "90f8e9e4-6972-44bd-bb63-1f4fb47f7790" = { # Gruvbox theme 
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/another-gruvbox-material-dark/latest.xpi";
           installation_mode = "force_installed";
         };
 
@@ -83,6 +83,10 @@ in {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           installation_mode = "force_installed";
         };
+				"d7742d87-e61d-4b78-b8a1-b469842139fa" = { # Vimium 
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest//vimium-ff/latest.xpi";
+					installation_mode = "force_installed";
+				};
       };
     };
   };
