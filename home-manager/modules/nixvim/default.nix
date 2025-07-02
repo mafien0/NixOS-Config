@@ -1,6 +1,7 @@
 {
 	imports = [
 		./lsp.nix
+		./mini.nix
 	];
 
 	programs.nixvim = {

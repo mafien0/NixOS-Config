@@ -4,7 +4,7 @@
 	];
 
 	home.file = {
-		".config/alacritty/alacritty.toml".file = ./alacritty.toml;
-		".config/alacritty/theme.toml".file = ./theme.toml;
+		".config/alacritty/alacritty.toml".source = ./alacritty.toml;
+		".config/alacritty/theme.toml".source = ./theme.toml;
 	};
 }
