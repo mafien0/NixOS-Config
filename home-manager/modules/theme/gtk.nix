@@ -2,20 +2,13 @@
   gtk = {
     enable = true;
     theme = {
-      name = "catppuccin-mocha-lavender-standard+normal";
-      package = pkgs.catppuccin-gtk.override {
-        variant = "mocha";
-        accents = [ "lavender" ];
-        size = "standard";
-        tweaks = [ "normal" ];
-      };
+      name = "Gruvbox-Dark";
+      package = pkgs.gruvbox-gtk-theme;
     };
+
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "lavender";
-      };
+      name = "Gruvbox-Plus-Dark";
+      package = pkgs.gruvbox-plus-icons;
     };
   };
 }

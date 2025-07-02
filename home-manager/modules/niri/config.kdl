@@ -3,7 +3,6 @@
 // Input(Keyboard, mouse)
 input {
 	warp-mouse-to-focus
-	focus-follows-mouse
 	keyboard {
 		numlock
 		xkb {
@@ -36,8 +35,8 @@ layout {
 
 	focus-ring {
 		width 2
-		active-color "#b4befe"
-		inactive-color "#313244"
+		active-color "#bdae93"
+		inactive-color "#282828"
 	}
 
 	shadow {
@@ -52,7 +51,8 @@ layout {
 
 // ScreenCasting fix
 debug {
-    wait-for-frame-completion-in-pipewire
+	wait-for-frame-completion-in-pipewire
+	disable-cursor-plane
 }
 
 // Rounded corners
@@ -70,7 +70,7 @@ environment {
 // Startup
 //spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "waypaper" "--restore"
+spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
 spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
 spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
@@ -89,7 +89,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
 
 hotkey-overlay {
-    skip-at-startup
+	skip-at-startup
 }
 
 // Binds
@@ -97,7 +97,7 @@ binds {
 	Mod+Shift+Slash { show-hotkey-overlay; }
 
 	Mod+C { close-window; }
-	Mod+O repeat=false { toggle-overview; }
+	Mod+Tab repeat=false { toggle-overview; }
 
 	// Float
 	Mod+V       { toggle-window-floating; }
@@ -111,15 +111,16 @@ binds {
 	Mod+Shift+F { fullscreen-window; }
 
 	// Applications
-	Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+	Mod+Q hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
 	Mod+B hotkey-overlay-title="Open browser: firefox" { spawn "firefox";}
 	Mod+E hotkey-overlay-title="Open file manager: nautilus" { spawn "nautilus";}
 	Mod+T hotkey-overlay-title="Open calc" { spawn "gnome-calculator";}
 	Mod+Z hotkey-overlay-title="Open discord" { spawn "vesktop";}
+	Mod+P hotkey-overlay-title="Wallpaper picker" { spawn "waypaper";}
 
 	// Rofi
 	Mod+R hotkey-overlay-title="Application Laucnher: rofi" { spawn "rofi" "-show" "drun"; }
-	Mod+U hotkey-overlay-title="Clipboard history: bemoji" { spawn "bash" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+	Mod+U hotkey-overlay-title="Clipboard history: rofi" { spawn "bash" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
 	Mod+apostrophe hotkey-overlay-title="Emoji picker: bemoji+rofi" { spawn "bemoji"; }
 
 	// Lock screen
@@ -130,10 +131,6 @@ binds {
 	Win+Shift+S { screenshot; }
 	Print { screenshot-screen; }
 	Alt+Print { screenshot-window; }
-
-	// ScreenCast
-	Mod+I { set-dynamic-cast-window; }
-	Mod+P { clear-dynamic-cast-target; }
 
 	// Focus
 	Mod+H     { focus-column-left; }
@@ -151,8 +148,8 @@ binds {
 	Mod+BracketLeft  { consume-or-expel-window-left; }
 	Mod+BracketRight { consume-or-expel-window-right; }
 	// Move window in and out of columns
-	Mod+Comma  { consume-window-into-column; }
-	Mod+Period { expel-window-from-column; }
+	Mod+Shift+BracketRight{ consume-window-into-column; }
+	Mod+Shift+BracketLeft{ expel-window-from-column; }
 
 	// Expand window focused to available space
 	Mod+Ctrl+F { expand-column-to-available-width; }

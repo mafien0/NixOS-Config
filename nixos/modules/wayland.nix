@@ -2,7 +2,7 @@
 
 	environment.systemPackages = with pkgs; [
 		niri
-    kitty
+		alacritty
 
 		swaylock
 		swaybg

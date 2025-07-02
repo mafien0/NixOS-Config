@@ -25,10 +25,10 @@
       set fish_greeting
       '';
 	};
-  catppuccin.fish = {
-    enable = true;
-    flavor = "mocha";
-  };
+	# catppuccin.fish = {
+ 	#   enable = true;
+ 	#   flavor = "mocha";
+ 	# };
 
   home.packages = with pkgs; [
     eza

@@ -21,7 +21,7 @@
         whoReacted.enable = true;
       };
       themeLinks = [
-        "https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css"
+        "https://raw.githubusercontent.com/Mafien01/discord-gruvbox-hard/refs/heads/main/gruvbox-dark.theme.css"
       ];
     };
   };

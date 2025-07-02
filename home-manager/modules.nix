@@ -6,7 +6,7 @@
 		./modules/niri
     ./modules/waypaper
     ./modules/rofi
-    ./modules/kitty
+		./modules/alacritty
 
     ./modules/fish
     ./modules/git
