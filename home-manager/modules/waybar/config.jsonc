@@ -1,0 +1,57 @@
+{
+	// Base
+	"height": 34,
+	"width": 1280,
+	"spacing": 15,
+  "start_hidden": true,
+  "ipc": true,
+	"margin-top": 5,
+
+	// Placement 
+	"modules-left": [
+		"niri/window"
+	],
+
+	"modules-center": [
+		"niri/workspaces"
+	],
+	"modules-right": [
+		"niri/language",
+		"memory",
+		"cpu",
+		"clock"
+	],
+
+	// Modules
+
+	// Niri modules
+	"niri/workspaces": {
+		"format": "{value}"
+	},
+
+	"niri/window": {
+		"format": "{title}"
+	},
+
+	"niri/language": {
+		"format": "{short}"
+	},
+
+	// Base modules
+	"clock": {
+		"interval": 60,
+		"format": "{:%d/%m/%y %H:%M}"
+	},
+
+	// Hardware
+	"cpu": {
+		"interval": 10,
+		"format": "{usage}% "
+	},
+
+	"memory": {
+		"interval": 30,
+		"format": "{percentage}% "
+	}
+}
+
