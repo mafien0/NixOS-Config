@@ -24,6 +24,7 @@ output "HDMI-A-1" {
 layout {
 	gaps 12
 	center-focused-column "never"
+	insert-hint { color "#d7992180"; }
 
 	preset-column-widths {
 		proportion 0.33333
@@ -49,7 +50,7 @@ layout {
 	}
 }
 
-// ScreenCasting fix
+// Fixes
 debug {
 	wait-for-frame-completion-in-pipewire
 	disable-cursor-plane
@@ -68,12 +69,12 @@ environment {
 }
 
 // Startup
-//spawn-at-startup "waybar"
+spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
-spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
-spawn-at-startup  "bash" "-c" "sleep 1 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+spawn-at-startup  "bash" "-c" "sleep 4 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
+spawn-at-startup  "bash" "-c" "sleep 5 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
 // Clipboard history
 spawn-at-startup  "bash" "-c" "cliphist wipe"
 spawn-at-startup  "bash" "-c" "wl-paste --type text --watch cliphist store"
@@ -117,6 +118,8 @@ binds {
 	Mod+T hotkey-overlay-title="Open calc" { spawn "gnome-calculator";}
 	Mod+Z hotkey-overlay-title="Open discord" { spawn "vesktop";}
 	Mod+P hotkey-overlay-title="Wallpaper picker" { spawn "waypaper";}
+	// Waybar toggle
+	Mod+W hotkey-overlay-title="Toggle waybar" { spawn "bash" "-c" "killall -SIGUSR1 .waybar-wrapped";}
 
 	// Rofi
 	Mod+R hotkey-overlay-title="Application Laucnher: rofi" { spawn "rofi" "-show" "drun"; }
@@ -191,9 +194,6 @@ binds {
 	Mod+Ctrl+8 { move-window-to-workspace 8; }
 	Mod+Ctrl+9 { move-window-to-workspace 9; }
 
-	// Tabs
-	Mod+W { toggle-column-tabbed-display; }
-
 	// Mouse binds
 	Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
 	Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
@@ -234,4 +234,9 @@ window-rule {
 window-rule {
 	match app-id=r#"waypaper$"#
 	open-floating true
+}
+
+layer-rule {
+	match namespace="waybar"
+	place-within-backdrop true
 }

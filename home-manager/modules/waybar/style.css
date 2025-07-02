@@ -1,0 +1,50 @@
+@define-color background rgba(29, 32, 33, 0.999); /* #1d2021, black bg fill fix */
+@define-color border #32302f;
+@define-color text #ebdbb2;
+
+@define-color ws-active #d79921;
+@define-color ws-active-text #fbf1c7;
+@define-color ws-inactive-text #bdae94;
+
+* {
+	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+/* Bar itself */
+window#waybar {
+	background: @background;
+	border: 2px solid @border;
+	border-radius: 5px;
+}
+
+/* Text colors */
+#window,
+#language,
+#clock {
+	color: @text;
+}
+
+/* Apply margin to first and last module */
+#window {
+	margin-left: 20px;
+}
+#clock {
+	margin-right: 20px;
+}
+
+#workspaces button {
+	padding: 0px;
+	border-radius: 0;
+	color: @ws-inactive-text;
+}
+
+#workspaces button.active {
+	border-top: 2px solid @ws-active;
+	color: @ws-active-text;
+}
+
+#cpu,
+#memory {
+	margin-right: 10px;
+}
