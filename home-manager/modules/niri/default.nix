@@ -1,5 +1,5 @@
 {
-  home.file = {
-    ".config/niri/config.kdl".source = ./config.kdl;
+	home.file = {
+		".config/niri/config.kdl".source = ./config.kdl;
 	};
 }

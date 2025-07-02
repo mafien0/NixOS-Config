@@ -1,5 +1,5 @@
 {
-  qt = {
-    platformTheme = "gtk";
-  };
+	qt = {
+		platformTheme = "gtk";
+	};
 }

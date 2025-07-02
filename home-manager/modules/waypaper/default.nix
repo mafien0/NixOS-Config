@@ -1,13 +1,13 @@
 { pkgs, ...}: {
-  home.packages = with pkgs; [
-    hyprpaper
-    waypaper
-  ];
+	home.packages = with pkgs; [
+		hyprpaper
+		waypaper
+	];
 
-  home.file = {
-    ".config/hypr/hyprpaper.conf".text = "";
-  };
-  home.activation.copyWaypaperConfig = ''
+	home.file = {
+		".config/hypr/hyprpaper.conf".text = "";
+	};
+	home.activation.copyWaypaperConfig = ''
 		target_dir="$HOME/.config/waypaper"
 		wallpaper_dir="$HOME/Pictures/Wallpapers"
 
@@ -21,5 +21,5 @@
 
 		cp -n ${./config.ini} $HOME/.config/waypaper/config.ini
 		chmod 600 $HOME/.config/waypaper/config.ini
-  '';
+	'';
 }
