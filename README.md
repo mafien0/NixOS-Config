@@ -2,7 +2,7 @@
 not recommended to use
 
 ## Todo:
-#### Fix a mess with tabs/spaces
+## Fix a mess with tabs/spaces
 because before switching to nixvim i used spaces, and after tabs
 
 
