@@ -9,9 +9,14 @@
   };
   home.activation.copyWaypaperConfig = ''
 		target_dir="$HOME/.config/waypaper"
+		wallpaper_dir="$HOME/Pictures/Wallpapers"
 
 		if [ ! -d "$target_dir" ]; then
 			mkdir -p "$target_dir"
+		fi
+
+		if [ ! -d "$wallpaper_dir" ]; then
+			mkdir -p "$wallpaper_dir"
 		fi
 
 		cp -n ${./config.ini} $HOME/.config/waypaper/config.ini

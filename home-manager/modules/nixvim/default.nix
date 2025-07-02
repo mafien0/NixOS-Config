@@ -64,7 +64,7 @@
 				options.silent = true;
 			}
 			{
-				action = "<cmd>diagnostics<CR>";
+				action = "<cmd>Telescope diagnostics<CR>";
 				key = "fd";
 				mode = ["n"];
 				options.silent = true;

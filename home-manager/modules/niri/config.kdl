@@ -73,7 +73,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
 spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
-spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+spawn-at-startup  "bash" "-c" "sleep 1 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
 // Clipboard history
 spawn-at-startup  "bash" "-c" "cliphist wipe"
 spawn-at-startup  "bash" "-c" "wl-paste --type text --watch cliphist store"
