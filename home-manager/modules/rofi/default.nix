@@ -7,6 +7,6 @@
 
   home.file = {
     ".config/rofi/config.rasi".source = ./config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./catppuccin-mocha.rasi;
+    ".config/rofi/gruvbox-dark-hard.rasi".source = ./gruvbox-dark-hard.rasi;
   };
 }
