@@ -13,8 +13,8 @@
       font_family = "FiraCode Nerd Font";
     };
   };
-  catppuccin.kitty = {
-    enable = true;
-    flavor = "mocha";
-  };
+	#  catppuccin.kitty = {
+	#    enable = true;
+	#    flavor = "mocha";
+	#  };
 }

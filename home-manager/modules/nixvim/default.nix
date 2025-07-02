@@ -6,8 +6,11 @@
 	programs.nixvim = {
 		enable = true;
 
-		colorschemes = {
-			catppuccin.enable = true;
+		colorschemes.gruvbox = {
+			enable = true;
+			settings = {
+				contrast = "hard";
+			};
 		};
 
 		opts = {

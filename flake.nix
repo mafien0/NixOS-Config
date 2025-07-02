@@ -24,10 +24,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
-    };
-
     nixcord = {
       url = "github:kaylorben/nixcord";
     };
@@ -39,7 +35,6 @@
     nvf,
     nixvim,
     hyprpanel,
-    catppuccin,
     nixcord,
     ... }: let
       system = "x86_64-linux";
@@ -54,7 +49,6 @@
           inherit system;
           modules = [
             ./nixos/configuration.nix
-            catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
           ];
 
@@ -73,7 +67,6 @@
           modules = [
             nvf.homeManagerModules.default
             nixvim.homeModules.nixvim
-            catppuccin.homeModules.catppuccin
             nixcord.homeModules.nixcord
             ./home-manager/home.nix
           ];
