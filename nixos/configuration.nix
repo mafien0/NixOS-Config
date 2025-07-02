@@ -1,27 +1,27 @@
 { config, pkgs, lib, ... }: {
 
-  imports = [
-    ./hardware-configuration.nix
-    ./modules.nix
-  ];
+	imports = [
+		./hardware-configuration.nix
+		./modules.nix
+	];
 
-  i18n.defaultLocale = "en_US.UTF-8";
+	i18n.defaultLocale = "en_US.UTF-8";
 
-  networking = {
-    networkmanager.enable = true;
-    hostName = "nixos";
-  };
+	networking = {
+		networkmanager.enable = true;
+		hostName = "nixos";
+	};
 
-  time = {
-    timeZone = "Asia/Almaty";
-    hardwareClockInLocalTime = true;
-  };
+	time = {
+		timeZone = "Asia/Almaty";
+		hardwareClockInLocalTime = true;
+	};
 
-  services.displayManager.ly.enable = true;
+	services.displayManager.ly.enable = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+	nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "25.05";
+	nixpkgs.config.allowUnfree = true;
+	system.stateVersion = "25.05";
 }
 

@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  home.sessionVariables = {
+	home.sessionVariables = {
 		EDITOR = "nvim";
 		VISUAL = "nvim";
 
@@ -27,12 +27,12 @@
 			"image/svg+xml" = "org.gnome.eog.desktop";
 
 # Mpv
-    "video/mp4" = "mpv.desktop";
-    "video/x-matroska" = "mpv.desktop";
-    "video/webm" = "mpv.desktop";
-    "audio/mpeg" = "mpv.desktop";
-    "audio/ogg" = "mpv.desktop";
-    "audio/wav" = "mpv.desktop";
+		"video/mp4" = "mpv.desktop";
+		"video/x-matroska" = "mpv.desktop";
+		"video/webm" = "mpv.desktop";
+		"audio/mpeg" = "mpv.desktop";
+		"audio/ogg" = "mpv.desktop";
+		"audio/wav" = "mpv.desktop";
 
 # Nautilus
 		"inode/directory" = "org.gnome.Nautilus.desktop";

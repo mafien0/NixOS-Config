@@ -1,18 +1,18 @@
 {
 	imports = [
-    ./modules/theme
+		./modules/theme
 		./modules/defaultApps.nix
 
 		./modules/niri
-    ./modules/waypaper
+		./modules/waypaper
 		./modules/waybar
-    ./modules/rofi
+		./modules/rofi
 		./modules/alacritty
 
-    ./modules/fish
-    ./modules/git
-    ./modules/firefox
-    ./modules/nixvim
-    ./modules/nixcord
+		./modules/fish
+		./modules/git
+		./modules/firefox
+		./modules/nixvim
+		./modules/nixcord
 	];
 }
