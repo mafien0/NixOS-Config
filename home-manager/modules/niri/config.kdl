@@ -70,7 +70,7 @@ environment {
 // Startup
 //spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "waypaper" "--restore"
+spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
 spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
 spawn-at-startup  "bash" "-c" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
