@@ -7,6 +7,8 @@
 		./modules/waypaper
 		./modules/waybar
 		./modules/swaync
+		./modules/swaylock
+		./modules/swayidle
 		./modules/rofi
 		./modules/alacritty
 

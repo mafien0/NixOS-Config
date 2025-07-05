@@ -70,6 +70,7 @@ environment {
 // Startup
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
+spawn-at-startup "swayidle"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
@@ -126,7 +127,7 @@ binds {
 	Mod+apostrophe hotkey-overlay-title="Emoji picker: bemoji+rofi" { spawn "bemoji"; }
 
 	// Lock screen
-	Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+	Mod+Shift+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
 	// ScreenShots
 
