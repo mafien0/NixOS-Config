@@ -5,6 +5,7 @@
 		alacritty
 
 		swaylock
+		swayidle
 		swaybg
 		swaynotificationcenter
 		waypaper
