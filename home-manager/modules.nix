@@ -6,6 +6,7 @@
 		./modules/niri
 		./modules/waypaper
 		./modules/waybar
+		./modules/swaync
 		./modules/rofi
 		./modules/alacritty
 

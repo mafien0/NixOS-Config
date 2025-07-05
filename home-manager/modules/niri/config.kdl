@@ -2,7 +2,6 @@
 
 // Input(Keyboard, mouse)
 input {
-	warp-mouse-to-focus
 	keyboard {
 		numlock
 		xkb {
@@ -70,6 +69,7 @@ environment {
 
 // Startup
 spawn-at-startup "waybar"
+spawn-at-startup "swaync"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "bash" "-c" "waypaper --restore"
 // Fix that at launch volume is set to 100%
@@ -78,7 +78,6 @@ spawn-at-startup  "bash" "-c" "sleep 5 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 
 // Clipboard history
 spawn-at-startup  "bash" "-c" "cliphist wipe"
 spawn-at-startup  "bash" "-c" "wl-paste --type text --watch cliphist store"
-
 
 // animations
 animations {
