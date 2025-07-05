@@ -5,7 +5,8 @@
 		obs-studio
 		prismlauncher
 		pwvucontrol
-		materialgram
+		telegram-desktop
+		wasistlos
 		cinny-desktop
 		protonvpn-gui
 		mpv
@@ -34,6 +35,7 @@
 		wget
 		zip
 		lua
+		gh
 
 		# Other
 		gcc

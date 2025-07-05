@@ -2,7 +2,7 @@
 	programs.git = {
 		enable = true;
 		userName = "Mafien_0";
-		userEmail = "93920918+Mafien01@users.noreply.github.com";
+		userEmail = "mafien_0@tuta.io";
 		extraConfig = {
 			init.defaultBranch = "main";
 		};
