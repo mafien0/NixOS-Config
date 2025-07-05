@@ -1,7 +1,9 @@
 {
 	imports = [
+		./keymaps.nix
 		./lsp.nix
 		./mini.nix
+		./plugins.nix
 	];
 
 	programs.nixvim = {
@@ -29,53 +31,9 @@
 			register = "unnamedplus";
 		};
 
-
-		plugins = {
-			lualine.enable = true;
-			web-devicons.enable = true;
-			fidget.enable = true;
-
-			treesitter = {
-				enable = true;
-				settings.indent.enable = true;
-			};
-
-			telescope = {
-				enable = true;
-				extensions = {
-					fzf-native.enable = true;
-					ui-select.enable = true;
-				};
-			};
+		globals = {
+			mapleader = "f";
 		};
 
-		keymaps = [
-			{
-				action = "<cmd>Telescope find_files<CR>";
-				key = "ff";
-				mode = ["n"];
-				options.silent = true;
-			}
-
-			{
-				action = "<cmd>Telescope live_grep<CR>";
-				key = "fg";
-				mode = ["n"];
-				options.silent = true;
-			}
-			{
-				action = "<cmd>Telescope diagnostics<CR>";
-				key = "fd";
-				mode = ["n"];
-				options.silent = true;
-			}
-
-			{
-				action = "<cmd>source %<CR>";
-				key = "fr";
-				mode = ["n"];
-				options.silent = true;
-			}
-		];
 	};
 }
