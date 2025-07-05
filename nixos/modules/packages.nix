@@ -1,7 +1,6 @@
 { pkgs, ... }: {
 
 	environment.systemPackages = with pkgs; [
-
 		# Desktop apps
 		obs-studio
 		prismlauncher
