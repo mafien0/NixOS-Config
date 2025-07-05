@@ -1,5 +1,6 @@
-# WIP
-not recommended to use
+# Preview
+
+![cool image](preview.png)
 
 # Intallation
 
