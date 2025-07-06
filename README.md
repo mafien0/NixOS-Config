@@ -16,7 +16,7 @@ inside of [home-manager/modules/git/default.nix](https://github.com/Mafien01/Nix
 
 copy your `hardware-configuration.nix` into nixos/hardware-configuration.nix
 
-and configure nixos/modules/packages.nix for your needs
+and configure `nixos/modules/packages.nix` for your needs
 
 and after, in instalation clone not my repository, but yours
 
