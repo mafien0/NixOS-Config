@@ -17,5 +17,6 @@
 		./modules/firefox
 		./modules/nixvim
 		./modules/nixcord
+		./modules/prismlauncher
 	];
 }
