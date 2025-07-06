@@ -7,6 +7,7 @@
 		pwvucontrol
 		telegram-desktop
 		wasistlos
+		tutanota-desktop
 		cinny-desktop
 		protonvpn-gui
 		mpv
@@ -36,6 +37,7 @@
 		zip
 		lua
 		gh
+		sl
 
 		# Other
 		gcc
