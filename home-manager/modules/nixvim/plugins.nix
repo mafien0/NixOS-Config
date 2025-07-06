@@ -4,6 +4,7 @@
 			lualine.enable = true;
 			web-devicons.enable = true;
 			fidget.enable = true;
+			orgmode.enable = true;
 
 			treesitter = {
 				enable = true;

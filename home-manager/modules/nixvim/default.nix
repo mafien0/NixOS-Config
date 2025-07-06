@@ -22,6 +22,7 @@
 			signcolumn = "no";
 			relativenumber = true;
 			number = true;
+			scrolloff = 10;
 			autoindent = true;
 			undofile = true;
 			formatoptions = "tcqj";
@@ -30,10 +31,5 @@
 		clipboard = {
 			register = "unnamedplus";
 		};
-
-		globals = {
-			mapleader = "f";
-		};
-
 	};
 }
