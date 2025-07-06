@@ -14,7 +14,9 @@ inside of [home-manager/home.nix](https://github.com/Mafien01/NixosHyprConf/blob
 
 inside of [home-manager/modules/git/default.nix](https://github.com/Mafien01/NixosHyprConf/blob/main/home-manager/modules/git/default.nix): name and mail
 
-and copy your `hardware-configuration.nix` into nixos/hardware-configuration.nix
+copy your `hardware-configuration.nix` into nixos/hardware-configuration.nix
+
+and configure nixos/modules/packages.nix for your needs
 
 and after, in instalation clone not my repository, but yours
 
