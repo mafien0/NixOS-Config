@@ -2,20 +2,14 @@
 	description = "NixOS configuration with unstable nixpkgs and Home Manager";
 
 	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 		home-manager = {
-			url = "github:nix-community/home-manager";
+			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
 		hyprpanel = {
 			url = "github:Jas-SinghFSU/HyprPanel";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
-		nvf = {
-			url = "github:notashelf/nvf";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
@@ -32,7 +26,6 @@
 	outputs = inputs@{ 
 		nixpkgs,
 		home-manager,
-		nvf,
 		nixvim,
 		hyprpanel,
 		nixcord,
@@ -65,7 +58,6 @@
 						inherit inputs system;
 					};
 					modules = [
-						nvf.homeManagerModules.default
 						nixvim.homeModules.nixvim
 						nixcord.homeModules.nixcord
 						./home-manager/home.nix
