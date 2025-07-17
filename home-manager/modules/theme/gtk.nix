@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 	gtk = {
 		enable = true;
+		font.name = "Fira Code Medium 12";
 		theme = {
 			name = "Gruvbox-Dark";
 			package = pkgs.gruvbox-gtk-theme;
