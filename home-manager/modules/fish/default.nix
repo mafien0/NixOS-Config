@@ -3,8 +3,8 @@
 	programs.fish = {
 		enable = true;
 		shellAliases = {
-			nrs = "nixos-rebuild switch --flake ~/nix";
-			nrb = "nixos-rebuild boot --flake ~/nix";
+			nrs = "sudo nixos-rebuild switch --flake ~/nix";
+			nrb = "sudo nixos-rebuild boot --flake ~/nix";
 			hms = "home-manager switch --flake ~/nix";
 
 			v = "nvim";
