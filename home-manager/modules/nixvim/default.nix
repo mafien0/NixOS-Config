@@ -32,4 +32,9 @@
 			register = "unnamedplus";
 		};
 	};
+
+	home.sessionVariables = {
+		EDITOR = "nvim";
+		VISUAL = "nvim";
+	};
 }

@@ -90,4 +90,21 @@ in {
 			};
 		};
 	};
+
+	home.sessionVariables = {
+		BROWSER = "${pkgs.firefox}/bin/firefox";
+	};
+
+	xdg.mimeApps = {
+		enable = true;
+		defaultApplications = {
+
+			# Firefox
+			"application/xhtml+xml" = "firefox.desktop";
+			"text/html" = "firefox.desktop";
+			"text/xml" = "firefox.desktop";
+			"x-scheme-handler/http" = "firefox.desktop";
+			"x-scheme-handler/https" = "firefox.desktop";
+		};
+	};
 }

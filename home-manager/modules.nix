@@ -1,7 +1,6 @@
 {
 	imports = [
 		./modules/theme
-		./modules/defaultApps.nix
 
 		./modules/niri
 		./modules/waypaper
