@@ -12,7 +12,7 @@
 		iconTheme = {
 			name = "Gruvbox-Plus-Dark";
 			package = pkgs.gruvbox-plus-icons.override {
-				folder-color = "yellow";
+				folder-color = "gold";
 			};
 		};
 	};
