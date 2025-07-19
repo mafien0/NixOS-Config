@@ -22,16 +22,16 @@
 			"gaps_out" = 10;
 			"gaps_workspaces" = 50;
 
-			"border_size" = 1;
+			"border_size" = 2;
 
-			"col.active_border" = "rgb(bdae93)";
+			"col.active_border" = "rgb(d79921)";
 			"col.inactive_border" = "rgb(282828)";
 
 			"layout" = "dwindle";
 		};
 
 		decoration = {
-			"rounding" = 5;
+			"rounding" = 0;
 			"active_opacity" = 1;
 			"inactive_opacity" = 1;
 
