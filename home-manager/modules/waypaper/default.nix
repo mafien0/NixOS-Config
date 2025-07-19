@@ -19,6 +19,11 @@
 			mkdir -p "$wallpaper_dir"
 		fi
 
+
+		if [ ! -f "$wallpaper_dir"/wallpaper.png ]; then
+			cp ${./wallpaper.png} "$wallpaper_dir"/wallpaper.png
+		fi
+
 		cp -n ${./config.ini} $HOME/.config/waypaper/config.ini
 		chmod 600 $HOME/.config/waypaper/config.ini
 	'';
