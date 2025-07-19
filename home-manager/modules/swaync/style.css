@@ -8,6 +8,8 @@
 @define-color cc-button #282828;
 @define-color cc-button-hover #32302f;
 
+@define-color switch-checked #d79921;
+
 * {
 	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	font-weight: bold;
@@ -18,7 +20,7 @@
 /* Notification itself */
 .notification-row .notification-background .notification {
   background: @background;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 2px solid @border;
   min-width: 400px;
 }
@@ -27,7 +29,7 @@
 .notification-row .notification-background .notification .notification-action:hover,
 .notification-row .notification-background .notification .notification-default-action:hover {
   background: @background-hover;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 /* Notification content */
@@ -47,9 +49,9 @@
 .control-center {
 	background: @background;
 	color: @text;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 2px solid @border;
-  margin: 7px 320px 500px;
+	border-top: 0px;
   min-width: 400px;
 }
 
@@ -58,6 +60,7 @@
 }
 
 .widget-title > button {
+	border-radius: 0px;
 	background: @cc-button;
 }
 
@@ -69,6 +72,10 @@
   color: @text;
 }
 
+.widget-dnd > switch {
+	border-radius: 0px;
+}
+
 .widget-dnd > switch:checked {
-  background: #d79921;
+  background: @switch-checked;
 }

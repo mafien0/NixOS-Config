@@ -2,9 +2,10 @@
 @define-color border #32302f;
 @define-color text #ebdbb2;
 
-@define-color ws-active #d79921;
+@define-color ws-focused #d79921;
 @define-color ws-active-text #fbf1c7;
-@define-color ws-inactive-text #bdae94;
+@define-color ws-persistent-text #bdae94;
+@define-color ws-urgent #cc241d;
 
 * {
 	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -14,38 +15,58 @@
 /* Bar itself */
 window#waybar {
 	background: @background;
-	border: 2px solid @border;
-	border-radius: 5px;
+	border-bottom: 2px solid @border;
 }
 
 /* Text colors */
 #window,
 #language,
+#cpu,
+#memory,
+#custom-notification,
+#pulseaudio,
+#custom-spacer,
 #clock {
 	color: @text;
 }
 
-/* Apply margin to first and last module */
-#window {
+/* Apply margin to first and last module */ #workspaces {
 	margin-left: 20px;
 }
 #clock {
 	margin-right: 20px;
 }
 
-#workspaces button {
-	padding: 0 5px 0 5px;
-	border-radius: 0;
-	color: @ws-inactive-text;
+/* Spacer */
+#custom-spacer {
+	margin: 0 3px 0 3px;
 }
 
-#workspaces button.active {
-	border-top: 2px solid @ws-active;
+/* Workspaces */
+
+#workspaces button {
+	padding: 0 7px 0 7px;
+	border-radius: 0;
 	color: @ws-active-text;
 }
 
-#custom-notification,
-#cpu,
-#memory {
-	margin-right: 10px;
+#workspaces button.empty {
+	padding: 0 7px 0 7px;
+	border-radius: 0;
+	color: @ws-persistent-text;
+}
+
+#workspaces button.active {
+	padding: 2px 7px 0 7px;
+	border-bottom: 2px solid @ws-focused;
+	color: @ws-active-text;
+}
+
+#workspaces button.urgent {
+	padding: 2px 7px 0 7px;
+	border-bottom: 2px solid @ws-urgent;
+}
+
+#custom-notification {
+	margin-right: 0px;
 }
