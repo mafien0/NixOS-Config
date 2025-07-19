@@ -3,12 +3,11 @@
 	programs.hyprland = {
 		enable = true;
 		xwayland.enable = true;
-		portalPackage = pkgs.xdg-desktop-portal-hyprland;
+		portalPackage = pkgs.xdg-desktop-portal-gtk;
 	};
 
 	environment.systemPackages = with pkgs; [
 		alacritty
-
 		grim
 		slurp
 		swaylock
@@ -22,23 +21,31 @@
 		cliphist
 		wl-clipboard
 
-		xdg-desktop-portal-hyprland
+		xdg-desktop-portal
 		xdg-desktop-portal-gtk
-
-		gnome-keyring
+		xdg-desktop-portal-hyprland
 	];
 
-	xdg.portal = {
+	xdg = {
 		enable = true;
-		xdgOpenUsePortal = true;
-		config = {
-			common.default = [ "gtk" ];
-			hyprland.default = [
-				"gtk"
-				"hyprland"
+		portal = {
+			enable = true;
+			xdgOpenUsePortal = true;
+			config = {
+				common.default = [ "gtk" "hyprland" ];
+				hyprland.default = [ "gtk" "hyprland" ];
+			};
+			extraPortals = with pkgs; [
+				xdg-desktop-portal-gtk
+				xdg-desktop-portal-hyprland
 			];
 		};
+	};
 
-		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+	xdg.mime.defaultApplications = {
+		"text/html" = "firefox.desktop";
+		"image/*" = "eog.desktop";
+		"video/*" = "mpv.desktop";
+		"inode/directory" = "org.gnome.Nautilus.desktop";
 	};
 }
