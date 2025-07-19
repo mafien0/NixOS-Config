@@ -4,10 +4,10 @@
 		modules = {
 
 			comment.mappings = {
-				comment = "fc";
-				comment_line = "fc";
-				comment_visual = "fc";
-				textobject = "fc";
+				comment = "<space>c";
+				comment_line = "<space>c";
+				comment_visual = "<space>c";
+				textobject = "<space>c";
 			};
 
 			indentscope = {

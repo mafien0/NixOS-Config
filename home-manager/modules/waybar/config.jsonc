@@ -9,15 +9,14 @@
 
 	// Placement 
 	"modules-left": [
-		"niri/window"
+		"hyprland/window"
 	],
 
 	"modules-center": [
-		"niri/workspaces"
+		"hyprland/workspaces"
 	],
 	"modules-right": [
 		"custom/notification",
-		"niri/language",
 		"memory",
 		"cpu",
 		"clock"
@@ -25,16 +24,9 @@
 
 	// Modules
 
-	// Niri modules
-	"niri/workspaces": {
-		"format": "{value}"
-	},
+	// hyprland modules
 
-	"niri/window": {
-		"format": "{title}"
-	},
-
-	"niri/language": {
+	"hyprland/language": {
 		"format": "{short}"
 	},
 
