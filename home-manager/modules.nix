@@ -2,7 +2,7 @@
 	imports = [
 		./modules/theme
 
-		./modules/niri
+		./modules/hyprland
 		./modules/waypaper
 		./modules/waybar
 		./modules/swaync

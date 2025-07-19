@@ -1,4 +1,4 @@
-@define-color background rgba(29, 32, 33, 0.999); /* #1d2021, black bg fill fix */
+@define-color background #1d2021;
 @define-color border #32302f;
 @define-color text #ebdbb2;
 
@@ -34,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0px;
+	padding: 0 5px 0 5px;
 	border-radius: 0;
 	color: @ws-inactive-text;
 }
