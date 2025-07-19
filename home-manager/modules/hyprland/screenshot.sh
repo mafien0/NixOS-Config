@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+FILENAME="Screenshot-$(date +%F_%T).png"
+TARGET_DIR="$HOME/Pictures/Screenshots"
+SAVE_PATH="$TARGET_DIR"/"$FILENAME"
 
 PROCESS_NAME="slurp" # The name of the process we want to check
 
@@ -19,18 +22,17 @@ if [ -z "$REGION" ]; then
 fi
 
 # Generate the filename with the current date and time
-FILENAME="Screenshot-$(date +%F_%T).png"
-SAVE_PATH="$HOME/Pictures/Screenshots/$FILENAME"
 
 # Option 2: Capture the region, save to file AND copy to clipboard with notification
 grim -g "$REGION" /tmp/screenshot_temp.png
 
+if [ ! -d "$TARGET_DIR" ]; then
+	mkdir -p "$TARGET_DIR"
+fi
+
 if [ $? -eq 0 ]; then
   wl-copy </tmp/screenshot_temp.png
   mv /tmp/screenshot_temp.png "$SAVE_PATH"
-  dunstify "Region screenshot taken"
-else
-  dunstify "Error taking screenshot" -u critical -t 3000
 fi
 
 # Remove the temporary file (just in case it remains)
