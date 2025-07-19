@@ -21,6 +21,11 @@ window#waybar {
 /* Text colors */
 #window,
 #language,
+#cpu,
+#memory,
+#custom-notification,
+#pulseaudio,
+#custom-spacer,
 #clock {
 	color: @text;
 }
