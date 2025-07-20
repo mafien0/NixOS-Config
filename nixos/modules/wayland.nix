@@ -8,6 +8,8 @@
 
 	environment.systemPackages = with pkgs; [
 		alacritty
+
+		hyprpicker
 		grim
 		slurp
 		swaylock
@@ -26,9 +28,7 @@
 	];
 
 	xdg = {
-		enable = true;
 		portal = {
-			enable = true;
 			xdgOpenUsePortal = true;
 			config = {
 				common.default = [ "gtk" "hyprland" ];
