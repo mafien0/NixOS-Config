@@ -5,7 +5,6 @@
 		exec-once = [
 			"waybar"
 			"swaync"
-			"swayidle"
 			"waypaper --restore"
 
 			# Set volume to #65%

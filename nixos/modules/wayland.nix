@@ -11,7 +11,6 @@
 		grim
 		slurp
 		swaylock
-		swayidle
 		swaybg
 		swaynotificationcenter
 		waypaper
