@@ -65,8 +65,8 @@ in {
 
 			ExtensionSettings = {
 # Theme
-				"90f8e9e4-6972-44bd-bb63-1f4fb47f7790" = { # Gruvbox theme 
-					install_url = "https://addons.mozilla.org/firefox/downloads/latest/another-gruvbox-material-dark/latest.xpi";
+				"{fd4fdeb0-5a65-4978-81c5-3488d4d56426}" = { # Gruvbox theme 
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest/gruvboxtheme/latest.xpi";
 					installation_mode = "force_installed";
 				};
 
@@ -83,7 +83,7 @@ in {
 					install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
 					installation_mode = "force_installed";
 				};
-				"d7742d87-e61d-4b78-b8a1-b469842139fa" = { # Vimium 
+				"{d7742d87-e61d-4b78-b8a1-b469842139fa}" = { # Vimium 
 					install_url = "https://addons.mozilla.org/firefox/downloads/latest//vimium-ff/latest.xpi";
 					installation_mode = "force_installed";
 				};
