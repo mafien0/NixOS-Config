@@ -11,6 +11,7 @@
 		protonvpn-gui
 		mpv
 		filezilla
+		blockbench
 
 		# CLI
 		btop
