@@ -27,6 +27,15 @@
 		xdg-desktop-portal-hyprland
 	];
 
+	environment.sessionVariables = {
+		GTK_USE_PORTAL = "0";
+		GDK_BACKEND = "wayland,x11";
+		SDL_VIDEODRIVER = "wayland";
+		CLUTTER_BACKEND = "wayland";
+		QT_QPA_PLATFORMTHEME = "qt5ct";
+		ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+	};
+
 	xdg = {
 		portal = {
 			xdgOpenUsePortal = true;
