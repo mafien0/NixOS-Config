@@ -12,6 +12,7 @@
 		mpv
 		filezilla
 		blockbench
+		qbittorrent
 
 		# CLI
 		btop
@@ -38,6 +39,8 @@
 		lua
 		gh
 		sl
+		
+		steam-run
 
 		# Other
 		gcc

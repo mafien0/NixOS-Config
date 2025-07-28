@@ -31,6 +31,7 @@
 	fileSystems."/Drive" = {
 		device = "/dev/disk/by-label/HOMELAB";
 		fsType = "ext4";
+		options = [ "defaults" ];
 	};
 
 	# Enables DHCP on each ethernet and wireless interface. In case of scripted networking

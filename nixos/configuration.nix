@@ -3,7 +3,6 @@
 	imports = [
 		./hardware-configuration.nix
 		./modules.nix
-		/home/mafien0/homelab
 	]
 		# optional include of my homelab(its outside of a git repo for security reasons)
 		++ lib.optional (builtins.pathExists /home/mafien0/homelab) /home/mafien0/homelab;

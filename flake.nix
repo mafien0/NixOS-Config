@@ -8,11 +8,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		hyprpanel = {
-			url = "github:Jas-SinghFSU/HyprPanel";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +15,7 @@
 
 		nixcord = {
 			url = "github:kaylorben/nixcord";
+			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
 
@@ -27,7 +23,6 @@
 		nixpkgs,
 		home-manager,
 		nixvim,
-		hyprpanel,
 		nixcord,
 		... }: let
 			system = "x86_64-linux";
