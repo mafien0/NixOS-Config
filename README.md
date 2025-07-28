@@ -23,7 +23,7 @@ and after, in instalation clone not my repository, but yours
 
 ### Clone repostory as ~/nix
 ```
-git clone https://github.com/Mafien01/NixOS-Config.git ~/nix
+git clone https://github.com/mafien0/NixOS-Config.git ~/nix
 ```
 
 ### Rebuild nixos using ~/nix flake
