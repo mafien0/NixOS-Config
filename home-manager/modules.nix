@@ -9,6 +9,7 @@
 		./modules/swaylock
 		./modules/rofi
 		./modules/alacritty
+		./modules/tmux
 
 		./modules/fish
 		./modules/git

@@ -7,7 +7,7 @@
 		telegram-desktop
 		wasistlos
 		tutanota-desktop
-		cinny-desktop
+		element-desktop
 		protonvpn-gui
 		mpv
 		filezilla
@@ -39,7 +39,7 @@
 		lua
 		gh
 		sl
-		
+
 		steam-run
 
 		# Other
