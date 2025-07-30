@@ -9,5 +9,6 @@
 		./modules/user.nix
 		./modules/cleanup.nix
 		./modules/gnomeapps.nix
+		./modules/homelab.nix
 	];
 }

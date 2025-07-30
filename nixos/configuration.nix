@@ -3,10 +3,7 @@
 	imports = [
 		./hardware-configuration.nix
 		./modules.nix
-	]
-		# optional include of my homelab(its outside of a git repo for security reasons)
-		++ lib.optional (builtins.pathExists /home/mafien0/homelab) /home/mafien0/homelab;
-
+	];
 	i18n.defaultLocale = "en_US.UTF-8";
 
 	networking = {
