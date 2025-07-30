@@ -12,6 +12,8 @@
 			v = "nvim";
 			vi = "nvim";
 			vim = "nvim";
+
+			t = "tmux";
 			
 			ls = "eza --icons=auto --classify --group-directories-first --header --time-style=long-iso";
 			l = "eza -la --icons=auto --classify --group-directories-first --header --time-style=long-iso";

@@ -5,10 +5,10 @@
 	];
 
 	home.file = {
-		".tmux.conf".source = ./.tmux.conf;
+		"tmux.conf".source = ./tmux.conf;
 	};
 
 	home.activation.tmuxSourceFile = ''
-		${pkgs.tmux}/bin/tmux source-file "$HOME/.tmux.conf"
+		${pkgs.tmux}/bin/tmux source-file "$HOME/tmux.conf"
 	'';
 }
