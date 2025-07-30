@@ -61,6 +61,9 @@ in {
 				"browser.newtabpage.activity-stream.showSponsored" = lock-false;
 				"browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
 				"browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+				"ui.systemUsesDarkTheme" = 1;
+				"browser.theme.dark-private-windows" = lock-true;
+				"layout.css.prefers-color-scheme.content-override" = 0;
 			};
 
 			ExtensionSettings = {
