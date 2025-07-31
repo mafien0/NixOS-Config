@@ -10,14 +10,14 @@
 
     bind = [
 			# Basic
-      "$mod, C, killactive,"
-      "$mod, M, exit,"
+      "$mod SHIFT, Q, killactive,"
+      "$mod SHIFT, M, exit,"
       "$mod, V, togglefloating,"
       "$mod, F, fullscreen,"
-      "$mod, W, exec, killall -SIGUSR1 .waybar-wrapped"
 
 			# Programs
-      "$mod, Q, exec, $terminal"
+      "$mod, return, exec, $terminal -e tmux"
+      "$mod SHIFT, return, exec, $terminal"
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer"
       "$mod, T, exec, $calc"
@@ -27,6 +27,7 @@
       "$mod, P, exec, waypaper"
       "$mod, O, exec, swaylock"
 
+			# Screenshot(grim + slurp)
 			"$mod SHIFT, S, exec, ${./screenshot.sh}"
 			", Print, exec, grim - | wl-copy && wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png"
 
