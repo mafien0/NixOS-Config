@@ -1,19 +1,19 @@
-{
+{ pkgs, ... }: {
 	wayland.windowManager.hyprland.settings = {
 		monitor = ",1920x1080@75,auto,1";
 
 		exec-once = [
-			"waybar"
-			"swaync"
-			"waypaper --restore"
+			"${pkgs.waybar}/bin/waybar"
+			"${pkgs.swaynotificationcenter}/bin/swaync"
+			"${pkgs.waypaper}/bin/waypaper --restore"
 
 			# Set volume to #65%
-			"sleep 4 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
-			"sleep 5 && wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
+			"sleep 5 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
 
 			# Clipboard history
-			"cliphist wipe"
-			"wl-paste --type text --watch cliphist store"
+			"${pkgs.cliphist}/bin/cliphist wipe"
+			"${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
 		];
 
 		general =  {

@@ -1,10 +1,17 @@
-{
+{ pkgs, ... }: {
   wayland.windowManager.hyprland.settings = {
-    "$terminal" = "alacritty";
-    "$browser" = "firefox";
-    "$menu" = "rofi"; "$explorer" = "nautilus";
-    "$calc" = "gnome-calculator";
-    "$discord" = "vesktop";
+		# Apps
+		"$wallpaper" = "${pkgs.waypaper}/bin/waypaper";
+		"$lock" = "${pkgs.swaylock}/bin/swaylock";
+    "$menu" = "${pkgs.rofi-wayland}/bin/rofi";
+		"$colorPicker" = "${pkgs.hyprpicker}/bin/hyprpicker -a";
+
+    "$terminal" = "${pkgs.alacritty}/bin/alacritty";
+    "$browser" = "${pkgs.firefox}/bin/firefox";
+		"$explorer" = "${pkgs.nautilus}/bin/nautilus";
+    "$calc" = "${pkgs.gnome-calculator}/bin/gnome-calculator";
+		"$emoji" = "${pkgs.bemoji}/bin/bemoji";
+    "$discord" = "${pkgs.vesktop}/bin/vesktop";
 
     "$mod" = "SUPER";
 
@@ -16,24 +23,23 @@
       "$mod, F, fullscreen,"
 
 			# Programs
-      "$mod, return, exec, $terminal -e tmux"
-      "$mod SHIFT, return, exec, $terminal"
+      "$mod, return, exec, $terminal"
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer"
       "$mod, T, exec, $calc"
       "$mod, D, exec, $discord"
 
-      "$mod, Z, exec, hyprpicker -a"
-      "$mod, P, exec, waypaper"
-      "$mod, O, exec, swaylock"
+      "$mod, Z, exec, $colorPicker"
+      "$mod, P, exec, $wallpaper"
+      "$mod, O, exec, $lock"
 
 			# Screenshot(grim + slurp)
 			"$mod SHIFT, S, exec, ${./screenshot.sh}"
-			", Print, exec, grim - | wl-copy && wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png"
+			", Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.wl-clipboard}/bin/wl-copy && ${pkgs.wl-clipboard}/bin/wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png"
 
 			# Rofi thing
       "$mod, R, exec, $menu -show drun"
-      "$mod, U, exec, bemoji"
+      "$mod, U, exec, $emoji"
       "$mod, G, exec, cliphist list | $menu -dmenu | cliphist decode | wl-copy"
       "$mod, Semicolon, exec, ps -ef | rofi -dmenu | awk '{print $2}' | xargs -r kill -9"
 
