@@ -6,6 +6,11 @@
 	];
 	i18n.defaultLocale = "en_US.UTF-8";
 
+  programs.nh = {
+    enable = true;
+    flake = "/home/mafien0/nix";
+  };
+
 	networking = {
 		networkmanager.enable = true;
 		hostName = "nixos";

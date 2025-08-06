@@ -20,8 +20,8 @@
 		fi
 
 
-		if [ ! -f "$wallpaper_dir"/wallpaper.png ]; then
-			cp ${./wallpaper.png} "$wallpaper_dir"/wallpaper.png
+		if [ ! -f "$wallpaper_dir"/wallpaper.jpg ]; then
+			cp ${./wallpaper.jpg} "$wallpaper_dir"/wallpaper.jpg
 		fi
 
 		cp -n ${./config.ini} $HOME/.config/waypaper/config.ini

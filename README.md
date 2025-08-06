@@ -1,6 +1,11 @@
 # Preview
 
-![cool image](preview.png)
+<table border="1">
+    <tr>
+        <td><img src="./pictures/preview-1.png" alt="Preview 1"></td>
+        <td><img src="./pictures/preview-2.png" alt="Preview 2"></td>
+    </tr>
+</table>
 
 # Intallation
 

@@ -7,9 +7,9 @@
 		shellAliases = {
 
 			# Rebuilds
-			nrs = "sudo nixos-rebuild switch --flake ~/nix";
-			nrb = "sudo nixos-rebuild boot --flake ~/nix";
-			hms = "home-manager switch --flake ~/nix";
+			nrs = "nh os switch";
+			nrb = "nh os boot";
+			hms = "nh home build";
 
 			# Nvim
 			v = "nvim";
