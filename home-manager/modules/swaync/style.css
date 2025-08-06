@@ -1,14 +1,4 @@
-@define-color background rgba(29, 32, 33, 0.999); /* #1d2021, black bg fill fix */
-@define-color border #32302f;
-@define-color text #ebdbb2;
-@define-color background-hover #282828;
-
-@define-color nf-button #3c3836;
-
-@define-color cc-button #282828;
-@define-color cc-button-hover #32302f;
-
-@define-color switch-checked #d79921;
+@import "./colors.css";
 
 * {
 	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;

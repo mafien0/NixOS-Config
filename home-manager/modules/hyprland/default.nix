@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{ pkgs, ... }: {
 
 	imports = [
 		./general.nix
@@ -6,6 +6,8 @@
 		./env.nix
 		./windowrules.nix
 	];
+
+	stylix.targets.hyprland.enable = true;
 
 # hyprland
 	wayland.windowManager.hyprland = {

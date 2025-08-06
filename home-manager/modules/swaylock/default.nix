@@ -1,10 +1,4 @@
-{ pkgs, ... }: {
-
-	home.packages = with pkgs; [
-		swaylock
-	];
-
-	home.file = {
-		".config/swaylock/config".source = ./config;
-	};
+{
+	stylix.targets.swaylock.enable = true;
+	programs.swaylock.enable = true;
 }

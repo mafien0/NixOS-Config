@@ -10,12 +10,12 @@
 		./modules/rofi
 		./modules/alacritty
 		./modules/tmux
-
 		./modules/fish
+
 		./modules/git
+		./modules/cli
 		./modules/firefox
 		./modules/nixvim
 		./modules/nixcord
-		./modules/prismlauncher
 	];
 }
