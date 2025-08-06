@@ -3,6 +3,7 @@
 * {
 	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	font-weight: bold;
+	font-size: 10pt;
 }
 
 /* Bar itself */
@@ -57,7 +58,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-	padding: 0 7px 0 7px;
+	padding: 2px 7px 0 7px;
 	border-bottom: 2px solid @ws-focused;
 	color: @ws-active-text;
 }

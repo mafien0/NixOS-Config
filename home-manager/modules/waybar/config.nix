@@ -5,7 +5,7 @@
 		layer = "top";
 		position = "top";
 		height = 28;
-		spacing = 15;
+		spacing = 10;
 		ipc = true;
 
 		# Placement
