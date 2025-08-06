@@ -1,5 +1,6 @@
 {
-	qt = {
-		platformTheme = "gtk";
+	stylix.targets.qt = {
+		enable = true;
+		platform = "qtct";
 	};
 }

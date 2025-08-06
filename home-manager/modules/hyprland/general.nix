@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, lib, ... }: {
 	wayland.windowManager.hyprland.settings = {
 		monitor = ",1920x1080@75,auto,1";
 
@@ -23,8 +23,8 @@
 
 			"border_size" = 2;
 
-			"col.active_border" = "rgb(d79921)";
-			"col.inactive_border" = "rgb(282828)";
+			"col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0A})";
+			"col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base01})";
 
 			"layout" = "dwindle";
 		};
@@ -38,7 +38,7 @@
 				"enabled" = true;
 				"range" = 7;
 				"render_power" = 3;
-				"color" = "rgba(1a1a1aee)";
+				"color" = lib.mkDefault "rgba(1a1a1aee)"; # Fallback
 			};
 		};
 

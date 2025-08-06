@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
 	lock-false = {
@@ -14,6 +14,13 @@ let
 		Status = "locked";
 	};
 in {
+
+	stylix.targets.firefox = {
+		enable = true;
+		profileNames = [ "default" ];
+	};
+
+	programs.firefox.profiles.default.extensions.force = true;
 
 	programs.firefox = {
 		enable = true;
@@ -66,14 +73,8 @@ in {
 				"layout.css.prefers-color-scheme.content-override" = 0;
 			};
 
+			# Extensions
 			ExtensionSettings = {
-# Theme
-				"{fd4fdeb0-5a65-4978-81c5-3488d4d56426}" = { # Gruvbox theme 
-					install_url = "https://addons.mozilla.org/firefox/downloads/latest/gruvboxtheme/latest.xpi";
-					installation_mode = "force_installed";
-				};
-
-# Extensions
 				"uBlock0@raymondhill.net" = { # ublock origin
 					install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
 					installation_mode = "force_installed";
@@ -87,7 +88,15 @@ in {
 					installation_mode = "force_installed";
 				};
 				"{d7742d87-e61d-4b78-b8a1-b469842139fa}" = { # Vimium 
-					install_url = "https://addons.mozilla.org/firefox/downloads/latest//vimium-ff/latest.xpi";
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+					installation_mode = "force_installed";
+				};
+				"FirefoxColor@mozilla.com" = { # Firefox color 
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest/firefox-color/latest.xpi";
+					installation_mode = "force_installed";
+				};
+				"addon@darkreader.org" = { # Dark reader
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
 					installation_mode = "force_installed";
 				};
 			};

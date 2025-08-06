@@ -1,13 +1,7 @@
 { pkgs, ... }: {
+	stylix.targets.gtk.enable = true;
 	gtk = {
 		enable = true;
-		font.name = "Fira Code Medium 12";
-		theme = {
-			name = "Gruvbox-Yellow-Dark";
-			package = pkgs.gruvbox-gtk-theme.override {
-				themeVariants = [ "yellow" ];
-			};
-		};
 
 		iconTheme = {
 			name = "Gruvbox-Plus-Dark";

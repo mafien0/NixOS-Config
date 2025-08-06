@@ -1,11 +1,4 @@
-@define-color background #1d2021;
-@define-color border #32302f;
-@define-color text #ebdbb2;
-
-@define-color ws-focused #d79921;
-@define-color ws-active-text #fbf1c7;
-@define-color ws-persistent-text #bdae94;
-@define-color ws-urgent #cc241d;
+@import "./colors.css";
 
 * {
 	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -30,7 +23,8 @@ window#waybar {
 	color: @text;
 }
 
-/* Apply margin to first and last module */ #workspaces {
+/* Apply margin to first and last module */
+#workspaces {
 	margin-left: 20px;
 }
 #clock {
@@ -48,6 +42,12 @@ window#waybar {
 	padding: 0 7px 0 7px;
 	border-radius: 0;
 	color: @ws-active-text;
+	min-width: 10px;
+	min-height: 10px
+}
+
+#workspaces button:hover {
+	color: @ws-active-text;
 }
 
 #workspaces button.empty {
@@ -57,7 +57,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-	padding: 2px 7px 0 7px;
+	padding: 0 7px 0 7px;
 	border-bottom: 2px solid @ws-focused;
 	color: @ws-active-text;
 }

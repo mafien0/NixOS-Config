@@ -1,6 +1,6 @@
 {
 	imports = [
-		./cursor.nix
+		./stylix.nix
 		./gtk.nix
 		./qt5ct.nix
 		./defaultApps.nix

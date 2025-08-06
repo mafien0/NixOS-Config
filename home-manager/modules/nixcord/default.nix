@@ -1,4 +1,5 @@
 {
+	stylix.targets.nixcord.enable = true;
 	programs.nixcord = {
 		enable = true;
 		vesktop.enable = true;
@@ -20,9 +21,9 @@
 				readAllNotificationsButton.enable = true;
 				whoReacted.enable = true;
 			};
-			themeLinks = [
-				"https://raw.githubusercontent.com/Mafien01/discord-gruvbox-hard/refs/heads/main/gruvbox-dark.theme.css"
-			];
+			# themeLinks = [
+			# 	"https://raw.githubusercontent.com/Mafien01/discord-gruvbox-hard/refs/heads/main/gruvbox-dark.theme.css"
+			# ];
 		};
 	};
 }

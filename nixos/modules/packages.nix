@@ -2,6 +2,7 @@
 
 	environment.systemPackages = with pkgs; [
 		# Desktop apps
+		prismlauncher 
 		obs-studio
 		pwvucontrol
 		telegram-desktop

@@ -3,8 +3,14 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
 		home-manager = {
 			url = "github:nix-community/home-manager/release-25.05";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		stylix = {
+			url = "github:nix-community/stylix/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
@@ -22,6 +28,7 @@
 	outputs = inputs@{ 
 		nixpkgs,
 		home-manager,
+		stylix,
 		nixvim,
 		nixcord,
 		... }: let
@@ -53,9 +60,10 @@
 						inherit inputs system;
 					};
 					modules = [
+						./home-manager/home.nix
 						nixvim.homeModules.nixvim
 						nixcord.homeModules.nixcord
-						./home-manager/home.nix
+						stylix.homeModules.stylix
 					];
 				};
 			};

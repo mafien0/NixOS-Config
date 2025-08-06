@@ -6,15 +6,10 @@
 		./plugins.nix
 	];
 
+	stylix.targets.nixvim.enable = true;
+
 	programs.nixvim = {
 		enable = true;
-
-		colorschemes.gruvbox = {
-			enable = true;
-			settings = {
-				contrast = "hard";
-			};
-		};
 
 		opts = {
 			tabstop = 2;

@@ -1,4 +1,4 @@
-@import "gruvbox-dark-hard"
+@import "theme"
 
 window {
     background-color: @background;
