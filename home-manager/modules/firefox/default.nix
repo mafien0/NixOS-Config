@@ -75,6 +75,14 @@ in {
 
 			# Extensions
 			ExtensionSettings = {
+
+				# Theme
+				"{b5e3442b-7765-4c6f-bad0-68bb4d3805df}" = { # ublock origin
+					install_url = "https://addons.mozilla.org/firefox/downloads/latest/rose-pine-extended/latest.xpi";
+					installation_mode = "force_installed";
+				};
+
+				# Extensions
 				"uBlock0@raymondhill.net" = { # ublock origin
 					install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
 					installation_mode = "force_installed";
