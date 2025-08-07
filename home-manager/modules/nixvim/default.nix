@@ -10,9 +10,8 @@
 
 	programs.nixvim = {
 		enable = true;
-
 		opts = {
-			tabstop = 2;
+			tabstop = 2; 
 			shiftwidth = 2;
 			signcolumn = "no";
 			relativenumber = true;
@@ -21,6 +20,7 @@
 			autoindent = true;
 			undofile = true;
 			formatoptions = "tcqj";
+			list = true;
 		};
 
 		clipboard = {

@@ -4,7 +4,6 @@
 			lualine.enable = true;
 			web-devicons.enable = true;
 			fidget.enable = true;
-			orgmode.enable = true;
 
 			treesitter = {
 				enable = true;
@@ -30,7 +29,7 @@
 						heigh = 15;
 						mappings = {
 							"<cr>" = "open";
-							" " = "open";
+							"e" = "open";
 							"a" = "add";
 							"d" = "delete";
 							"r" = "rename";

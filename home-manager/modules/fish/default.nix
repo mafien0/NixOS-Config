@@ -9,7 +9,7 @@
 			# Rebuilds
 			nrs = "nh os switch";
 			nrb = "nh os boot";
-			hms = "nh home build";
+			hms = "nh home switch";
 
 			# Nvim
 			v = "nvim";
