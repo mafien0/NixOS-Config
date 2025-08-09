@@ -1,11 +1,14 @@
 {
-	stylix.targets.nixcord.enable = true;
 	programs.nixcord = {
 		enable = true;
 		vesktop.enable = true;
 
 		config = {
 			frameless = true;
+			themeLinks = [
+				"https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-rose-pine.theme.css"
+			];
+
 			plugins = {
 				hideAttachments.enable = true; 
 				experiments.enable = true;
@@ -21,9 +24,7 @@
 				readAllNotificationsButton.enable = true;
 				whoReacted.enable = true;
 			};
-			# themeLinks = [
-			# 	"https://raw.githubusercontent.com/Mafien01/discord-gruvbox-hard/refs/heads/main/gruvbox-dark.theme.css"
-			# ];
+
 		};
 	};
 }

@@ -13,7 +13,6 @@
 
 			# No italic fonts
 			font = {
-				# size = lib.mkForce 10;
 				normal.style = lib.mkForce "Medium";
 				italic.style = lib.mkForce "Medium";
 				bold.style = lib.mkForce "Bold";
