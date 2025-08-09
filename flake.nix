@@ -23,6 +23,12 @@
 			url = "github:kaylorben/nixcord";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		spicetify-nix = {
+			url = "github:Gerg-L/spicetify-nix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 	};
 
 	outputs = inputs@{ 
@@ -31,6 +37,7 @@
 		stylix,
 		nixvim,
 		nixcord,
+		spicetify-nix,
 		... }: let
 			system = "x86_64-linux";
 
@@ -61,9 +68,10 @@
 					};
 					modules = [
 						./home-manager/home.nix
+						stylix.homeModules.stylix
 						nixvim.homeModules.nixvim
 						nixcord.homeModules.nixcord
-						stylix.homeModules.stylix
+						inputs.spicetify-nix.homeManagerModules.default
 					];
 				};
 			};

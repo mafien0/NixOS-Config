@@ -6,7 +6,7 @@
 		config = {
 			frameless = true;
 			themeLinks = [
-				"https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/system24-rose-pine.theme.css"
+				"https://raw.githubusercontent.com/mafien0/system24/refs/heads/main/theme/flavors/system24-rose-pine.theme.css"
 			];
 
 			plugins = {
@@ -21,7 +21,6 @@
 				noF1.enable = true;
 				petpet.enable = true;
 				pictureInPicture.enable = true;
-				readAllNotificationsButton.enable = true;
 				whoReacted.enable = true;
 			};
 
