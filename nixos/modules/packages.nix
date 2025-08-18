@@ -3,7 +3,6 @@
 	environment.systemPackages = with pkgs; [
 
 		# Desktop apps
-		prismlauncher 
 		obs-studio
 		pwvucontrol
 		telegram-desktop
@@ -42,11 +41,17 @@
 		gh
 		sl
 
-		steam-run
-
 		# Other
-		gcc
 		home-manager
+		steam-run
+		gcc
+		jdk
+
+		# Prismlauncher
+		(prismlauncher.override {
+			additionalPrograms = [ ffmpeg ];
+			jdks = [ graalvm-ce zulu8 zulu17 zulu ];
+		})
 	];
 
 	fonts.packages = with pkgs; [
@@ -62,4 +67,5 @@
 		noto-fonts-emoji
 		proggyfonts
 	];
+
 }
