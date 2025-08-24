@@ -9,11 +9,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		stylix = {
-			url = "github:nix-community/stylix/release-25.05";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +29,6 @@
 	outputs = inputs@{ 
 		nixpkgs,
 		home-manager,
-		stylix,
 		nixvim,
 		nixcord,
 		spicetify-nix,
@@ -68,7 +62,6 @@
 					};
 					modules = [
 						./home-manager/home.nix
-						stylix.homeModules.stylix
 						nixvim.homeModules.nixvim
 						nixcord.homeModules.nixcord
 						inputs.spicetify-nix.homeManagerModules.default

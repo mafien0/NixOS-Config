@@ -1,14 +1,7 @@
 {
 	imports = [
-		./modules/theme
-
-		./modules/hyprland
-		./modules/waypaper
-		./modules/waybar
-		./modules/swaync
-		./modules/swaylock
-		./modules/rofi
-		./modules/alacritty
+		./modules/gnome
+		./modules/ghostty
 		./modules/tmux
 		./modules/fish
 

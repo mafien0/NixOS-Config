@@ -1,6 +1,8 @@
 { pkgs, ... }: {
 
 	environment.systemPackages = with pkgs; [
+		gnome-extension-manager
+		dconf-editor
 
 		# Desktop apps
 		obs-studio

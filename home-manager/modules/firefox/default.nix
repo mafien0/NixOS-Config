@@ -15,11 +15,6 @@ let
 	};
 in {
 
-	stylix.targets.firefox = {
-		enable = true;
-		profileNames = [ "default" ];
-	};
-
 	programs.firefox.profiles.default.extensions.force = true;
 
 	programs.firefox = {
