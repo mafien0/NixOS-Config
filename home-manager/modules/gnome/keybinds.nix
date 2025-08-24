@@ -43,5 +43,35 @@
 			switch-to-application-8 = [];
 			switch-to-application-9 = [];
 		};
+
+		# Custom keybinds
+
+		# Enable
+		"org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
+			"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" # Firefox
+			"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" # Ghostty
+			"/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" # Nautilus
+		];
+
+		# Super+b open firefox
+		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+			binding = "<Super>b";
+			command = "firefox";
+			name = "Open Browser";
+		};
+
+		# Super+Enter open ghostty
+		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+			binding = "<Super>Return";
+			command = "ghostty";
+			name = "Open Terminal";
+		};
+
+		# Super+e open nautilus
+		"org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+			binding = "<Super>e";
+			command = "nautilus";
+			name = "Open File Manager";
+		};
 	};
 }

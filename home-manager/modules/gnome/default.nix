@@ -2,6 +2,7 @@
 	imports = [
 		./keybinds.nix
 		./extensions.nix
+		./defaultapps.nix
 	];
 
 	# Cursor
@@ -9,12 +10,24 @@
 		package = pkgs.volantes-cursors;
 		name = "volantes_cursors";
 		size = 24;
+		gtk.enable = true;
+		x11.enable = true;
+		x11.defaultCursor = "left_ptr";
 	};
 
 	# Gnome
 	dconf = {
 		enable = true;
 		settings = {
+
+			"org/gnome/shell".favorite-apps = [
+				"firefox.desktop"
+				"vesktop.dekstop"
+				"com.mitchellh.ghostty.desktop"
+				"org.prismlauncher.PrismLauncher.desktop"
+				"spotify.desktop"
+				"org.gnome.Nautilus.desktop"
+			];
 
 			# Preferences
 			"org/gnome/desktop/wm/preferences" = {
@@ -30,6 +43,9 @@
 			"org/gnome/desktop/interface" = {
 				color-scheme = "prefer-dark";
 				enable-hot-corners = false;
+
+				cursor-theme = "volantes_cursors";
+				cursor-size = 24;
 			};
 
 			# Alt+Tab current workspace only

@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
 	imports = [
 		./keymaps.nix
 		./lsp.nix
@@ -22,10 +22,20 @@
 			list = true;
 		};
 
-		colorschemes.gruvbox = {
-			enable = true;
-			settings.contrast = "hard";
-		};
+		# Adwaita color scheme
+		extraPlugins = [ pkgs.vimPlugins.adwaita-nvim ];
+		colorscheme = "adwaita";
+
+		extraConfigLua = ''
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if client then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+			})
+			'';
 
 		clipboard = {
 			register = "unnamedplus";

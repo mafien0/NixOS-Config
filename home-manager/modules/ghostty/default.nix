@@ -8,6 +8,7 @@
 			font-family = "Fira Code";
 			font-size = 12;
 			font-style = "bold";
+			theme = "Adwaita Dark";
 
 			keybind = [
 				"alt+q=close_window"
