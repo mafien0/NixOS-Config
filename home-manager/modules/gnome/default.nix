@@ -1,18 +1,30 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 	imports = [
 		./keybinds.nix
 		./extensions.nix
 		./defaultapps.nix
 	];
 
+
+	# Wallpaper
+	home.file."Pictures/wallpaper.jxl".source = ./wallpaper.jxl;
+	dconf.settings."org/gnome/desktop/background".picture-uri      = "file://${config.home.homeDirectory}/Pictures/wallpaper.jxl";
+	dconf.settings."org/gnome/desktop/background".picture-uri-dark = "file://${config.home.homeDirectory}/Pictures/wallpaper.jxl";
+
 	# Cursor
 	home.pointerCursor = {
 		package = pkgs.volantes-cursors;
 		name = "volantes_cursors";
-		size = 24;
 		gtk.enable = true;
 		x11.enable = true;
 		x11.defaultCursor = "left_ptr";
+	};
+
+	# Icon theme
+	home.packages = [ pkgs.morewaita-icon-theme ]; # For some reason, this has to be included
+	gtk.iconTheme = {
+		package = pkgs.morewaita-icon-theme;
+		name = "MoreWaita";
 	};
 
 	# Gnome
@@ -41,11 +53,12 @@
 
 			# Interface
 			"org/gnome/desktop/interface" = {
+				accent-color = "slate";
 				color-scheme = "prefer-dark";
-				enable-hot-corners = false;
-
+				icon-theme = "MoreWaita";
 				cursor-theme = "volantes_cursors";
-				cursor-size = 24;
+
+				enable-hot-corners = false;
 			};
 
 			# Alt+Tab current workspace only
