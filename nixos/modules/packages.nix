@@ -6,14 +6,10 @@
 
 		# Desktop apps
 		obs-studio
-		pwvucontrol
 		telegram-desktop
-		wasistlos
 		tutanota-desktop
-		element-desktop
 		protonvpn-gui
 		mpv
-		filezilla
 		blockbench
 		qbittorrent
 
@@ -23,7 +19,6 @@
 		curl
 		fastfetch
 		ffmpeg
-		file
 		fzf
 		git
 		killall
@@ -33,13 +28,11 @@
 		ntfs3g
 		progress
 		ripgrep
-		tmux
 		tree
 		unzip
 		watch
 		wget
 		zip
-		lua
 		gh
 		sl
 

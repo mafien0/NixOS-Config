@@ -2,7 +2,6 @@
 	imports = [
 		./modules/gnome
 		./modules/ghostty
-		./modules/tmux
 		./modules/fish
 
 		./modules/git
