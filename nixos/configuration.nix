@@ -4,12 +4,19 @@
 		./hardware-configuration.nix
 		./modules.nix
 	];
-	i18n.defaultLocale = "en_US.UTF-8";
 
-  programs.nh = {
-    enable = true;
-    flake = "/home/mafien0/nix";
-  };
+	i18n = {
+		defaultLocale = "en_US.UTF-8";
+		supportedLocales = [
+			"en_US.UTF-8/UTF-8"
+			"ru_RU.UTF-8/UTF-8"
+		];
+	};
+
+	programs.nh = {
+		enable = true;
+		flake = "/home/mafien0/nix";
+	};
 
 	networking = {
 		networkmanager.enable = true;
@@ -23,7 +30,7 @@
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 
-	nixpkgs.config.allowUnfree = true;
-	system.stateVersion = "25.05";
+nixpkgs.config.allowUnfree = true;
+system.stateVersion = "25.05";
 }
 
