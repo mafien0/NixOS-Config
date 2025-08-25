@@ -3,7 +3,7 @@ Look for <https://github.com/mafien0/NixOS-Hyprland>
 
 # Preview
 
-<table border="1">
+<table>
     <tr>
         <td><img src="./pictures/preview-1.png" alt="Preview 1"></td>
         <td><img src="./pictures/preview-2.png" alt="Preview 2"></td>
