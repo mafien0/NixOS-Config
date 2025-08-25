@@ -1,10 +1,12 @@
 # Keybinds
 {
 	dconf.settings = {
-
 		"org/gnome/desktop/wm/keybindings" = {
+
 			close =                   ["<Super><Shift>q"];
 			toggle-maximized =        ["<Super>f"];
+			toggle-fullscreen =       ["<Super><Shift>f"];
+			begin-resize =            ["<Super>r"];
 			minimize =                ["<Super>d"];
 			switch-input-source =     ["<Shift><Alt>"];
 			switch-windows =          ["<Alt>Tab"];

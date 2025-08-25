@@ -8,6 +8,10 @@ Look for <https://github.com/mafien0/NixOS-Hyprland>
         <td><img src="./pictures/preview-1.png" alt="Preview 1"></td>
         <td><img src="./pictures/preview-2.png" alt="Preview 2"></td>
     </tr>
+    <tr>
+        <td><img src="./pictures/preview-3.png" alt="Preview 3"></td>
+        <td><img src="./pictures/preview-4.png" alt="Preview 4"></td>
+    </tr>
 </table>
 
 # Installation
@@ -48,7 +52,3 @@ home-manager switch --flake ~/nix
 After it, u can nixos-rebuild using `nrs`(switch) or `nrb`(boot)
 
 and and rebuild home-manager using `hms`
-
-
-
-

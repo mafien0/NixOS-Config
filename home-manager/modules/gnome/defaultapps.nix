@@ -2,6 +2,10 @@
 	xdg.mimeApps = {
 		enable = true;
 		defaultApplications = {
+
+			"application/x-terminal-emulator" = "com.mitchellh.ghostty.desktop";
+			"x-scheme-handler/terminal" = "com.mitchellh.ghostty.desktop";
+
 			"text/html" = "firefox.desktop";
 			"x-scheme-handler/http" = "firefox.desktop";
 			"x-scheme-handler/https" = "firefox.desktop";
