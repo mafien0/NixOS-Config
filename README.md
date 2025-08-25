@@ -1,3 +1,6 @@
+## For those who came for hyprland config
+Look for <https://github.com/mafien0/NixOS-Hyprland>
+
 # Preview
 
 <table border="1">
@@ -5,9 +8,13 @@
         <td><img src="./pictures/preview-1.png" alt="Preview 1"></td>
         <td><img src="./pictures/preview-2.png" alt="Preview 2"></td>
     </tr>
+    <tr>
+        <td><img src="./pictures/preview-3.png" alt="Preview 3"></td>
+        <td><img src="./pictures/preview-4.png" alt="Preview 4"></td>
+    </tr>
 </table>
 
-# Intallation
+# Installation
 
 ### Recommend to fork this repository and change usernames to yours
 inside of [flake.nix](https://github.com/Mafien01/NixOS-Config/blob/main/flake.nix)
@@ -42,6 +49,6 @@ home-manager switch --flake ~/nix
 
 ### Reboot
 
+After it, u can nixos-rebuild using `nrs`(switch) or `nrb`(boot)
 
-
-
+and and rebuild home-manager using `hms`

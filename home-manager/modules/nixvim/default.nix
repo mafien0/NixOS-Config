@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
 	imports = [
 		./keymaps.nix
 		./lsp.nix
@@ -6,11 +6,10 @@
 		./plugins.nix
 	];
 
-	stylix.targets.nixvim.enable = true;
-
 	programs.nixvim = {
 		enable = true;
 		opts = {
+			termguicolors = true;
 			tabstop = 2; 
 			shiftwidth = 2;
 			signcolumn = "no";
@@ -22,6 +21,21 @@
 			formatoptions = "tcqj";
 			list = true;
 		};
+
+		# Adwaita color scheme
+		extraPlugins = [ pkgs.vimPlugins.adwaita-nvim ];
+		colorscheme = "adwaita";
+
+		extraConfigLua = ''
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if client then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+			})
+			'';
 
 		clipboard = {
 			register = "unnamedplus";

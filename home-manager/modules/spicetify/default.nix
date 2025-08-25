@@ -8,7 +8,5 @@
 			keyboardShortcut
 			hidePodcasts
 		];
-		theme = spicePkgs.themes.text;
-		colorScheme = "RosePine";
 	};
 }
