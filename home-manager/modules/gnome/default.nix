@@ -34,7 +34,7 @@
 
 			"org/gnome/shell".favorite-apps = [
 				"firefox.desktop"
-				"vesktop.dekstop"
+				"vesktop.desktop"
 				"com.mitchellh.ghostty.desktop"
 				"org.prismlauncher.PrismLauncher.desktop"
 				"spotify.desktop"
