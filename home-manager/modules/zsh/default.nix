@@ -1,10 +1,6 @@
-{ pkgs, ... }: {
+{
 	imports = [
 		./tools.nix
-	];
-
-	home.packages = with pkgs; [
-		thefuck
 	];
 
 	programs.zsh = {
@@ -14,7 +10,6 @@
 
 		oh-my-zsh = {
 			enable = true;
-			plugins = [ "git" "thefuck" ];
 			theme = "crcandy";
 		};
 
