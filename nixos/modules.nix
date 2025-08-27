@@ -5,7 +5,6 @@
 		./modules/nvidia.nix
 		./modules/bootloader.nix
 		./modules/audio.nix
-		./modules/shell.nix
 		./modules/user.nix
 		./modules/homelab.nix
 	];

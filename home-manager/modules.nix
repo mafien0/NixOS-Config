@@ -2,7 +2,7 @@
 	imports = [
 		./modules/gnome
 		./modules/ghostty
-		./modules/fish
+		./modules/zsh
 
 		./modules/git
 		./modules/cli

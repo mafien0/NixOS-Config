@@ -48,8 +48,8 @@
 			switch-to-application-9 = [];
 		};
 
-		"org/gnome/settings-daemon/plugins/" = {
-			media-keys =              ["<Super>c"];
+		"org/gnome/settings-daemon/plugins/media-keys" = {
+			mic-mute =["<Super>c"];
 		};
 
 		# Custom keybinds
