@@ -1,9 +1,6 @@
 { pkgs, ... }: {
 	imports = [
-		./keymaps.nix
-		./lsp.nix
-		./mini.nix
-		./plugins.nix
+		./plugins
 	];
 
 	programs.nixvim = {
@@ -20,6 +17,12 @@
 			undofile = true;
 			formatoptions = "tcqj";
 			list = true;
+		};
+
+		# <leader> = <space>
+		globals = {
+			mapleader = " ";
+			maplocalleader = " ";
 		};
 
 		# Adwaita color scheme

@@ -67,8 +67,8 @@
 
 			# Input
 			"org/gnome/desktop/input-sources".xkb-options = [
-				"grp:alt_shift_toggle"
 				"caps:escape"
+				"grp:win_space_toggle"
 			];
 
 		};

@@ -7,10 +7,14 @@
 		# Desktop apps
 		obs-studio
 		telegram-desktop
-		tutanota-desktop
+		bitwarden-desktop
+		zapzap
 		protonvpn-gui
 		mpv
 		blockbench
+		aseprite
+		gimp
+		inkscape
 		qbittorrent
 
 		# CLI

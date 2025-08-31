@@ -8,7 +8,6 @@
 			toggle-fullscreen =       ["<Super><Shift>f"];
 			begin-resize =            ["<Super>r"];
 			minimize =                ["<Super>d"];
-			switch-input-source =     ["<Shift><Alt>"];
 			switch-windows =          ["<Alt>Tab"];
 			switch-windows-backward = ["<Alt><Shift>Tab"];
 

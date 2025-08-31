@@ -1,0 +1,9 @@
+{
+	programs.nixvim = {
+		plugins.treesitter = {
+			enable = true;
+			settings.indent.enable = true;
+			# matchup.enable = lib.mkForce true;
+		};
+	};
+}

@@ -12,7 +12,7 @@
 
 			keybind = [
 				"alt+q=close_window"
-				"alt+c=new_tab"
+				"alt+t=new_tab"
 
 				"alt+i=new_split:right"
 				"alt+o=new_split:down"
