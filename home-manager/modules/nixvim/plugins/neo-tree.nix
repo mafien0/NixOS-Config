@@ -21,7 +21,5 @@
 				};
 			};
 		};
-
-		keymaps = [{ mode = "n"; key = "<leader>e"; action = "<cmd>Neotree focus toggle<CR>"; options.desc = "Explorer"; }];
 	};
 }

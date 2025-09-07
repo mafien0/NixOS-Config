@@ -1,11 +1,23 @@
 { config, ...}: {
   hardware.nvidia = {
-    powerManagement.enable = true;
     modesetting.enable = true;
     nvidiaSettings = true;
     open = false;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    powerManagement = {
+			enable = true;
+			finegrained = false;
+		};
   };
+
+	boot.kernelParams = [
+		"nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+		"nvidia.NVreg_TemporaryFilePath=/var/tmp"
+	];
+
+	systemd.tmpfiles.rules = [
+		"d /var/tmp 1777 root root 10d"
+	];
  
   services.xserver.videoDrivers = ["nvidia"];
   hardware.graphics.enable = true;

@@ -14,7 +14,11 @@
 	};
 
 	# Tailscale
-	services.tailscale.enable = true;
+	nixpkgs.config.packageOverrides = pkgs: {
+		tailscale = pkgs.tailscale.overrideAttrs (oldAttrs: {
+			doCheck = false;
+		});
+	};
 
 	# SSH
 	services.openssh = {
@@ -22,6 +26,7 @@
 		ports = [ 22 ];
 		settings = {
 			PasswordAuthentication = true;
+			UseDns = true;
 			AllowUsers = null; 
 			PermitRootLogin = "prohibit-password";
 		};

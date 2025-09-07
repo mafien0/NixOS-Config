@@ -13,14 +13,6 @@
 			lualine.enable = true;
 			web-devicons.enable = true;
 			fidget.enable = true;
-
-			which-key = {
-				enable = true;
-				settings.spec = [
-					{ __unkeyed-3 = "<leader>l"; group = "LSP"; icon = "󰌌 "; }
-				];
-			};
-
 		};
 	};
 }

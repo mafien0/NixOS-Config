@@ -17,8 +17,6 @@
 			inlayHints = true;
 		};
 
-		plugins.which-key.settings.spec = [{ __unkeyed-3 = "<leader>l"; group = "LSP"; icon = "󰌌 "; }];
-
 		keymaps = [
 			{ mode = "n"; key = "K"; action = "<cmd>lua vim.lsp.buf.hover()<CR>"; options.desc = "Hover info"; }
 			{ mode = "n"; key = "<leader>ld"; action = "<cmd>lua vim.lsp.buf.definition()<CR>"; options.desc = "Go to definition"; }
