@@ -14,6 +14,7 @@
 	};
 
 	# Tailscale
+	services.tailscale.enable = true;
 	nixpkgs.config.packageOverrides = pkgs: {
 		tailscale = pkgs.tailscale.overrideAttrs (oldAttrs: {
 			doCheck = false;

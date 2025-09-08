@@ -9,7 +9,7 @@
 			extraOptions.window = {
 				position = "bottom";
 				heigh = 15;
-				mappings = {
+				mappings= {
 					"<cr>" = "open";
 					"e" = "open";
 					"a" = "add";
@@ -21,5 +21,8 @@
 				};
 			};
 		};
+		keymaps = [
+			{ mode = "n"; key = "<leader>e"; action = "<Cmd>Neotree toggle<CR>"; options.desc = "Open Neo-Tree"; }
+		];
 	};
 }

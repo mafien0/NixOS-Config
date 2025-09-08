@@ -21,6 +21,7 @@
 		btop
 		cava
 		curl
+		dig
 		fastfetch
 		ffmpeg
 		fzf
