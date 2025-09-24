@@ -32,7 +32,8 @@
 		nixvim,
 		nixcord,
 		spicetify-nix,
-		... }: let
+		... }:
+		let
 			system = "x86_64-linux";
 
 			pkgs = import nixpkgs {
@@ -42,31 +43,26 @@
 		in {
 			nixosConfigurations = {
 				nixos = nixpkgs.lib.nixosSystem {
-					inherit system;
 					modules = [
 						./nixos/configuration.nix
 						home-manager.nixosModules.home-manager
 					];
 
-					specialArgs = {
-						inherit inputs system;
-					};
+					inherit system;
+					specialArgs = { inherit inputs system; };
 				};
 			};
 
-			homeConfigurations = {
-				mafien0 = home-manager.lib.homeManagerConfiguration {
-					inherit pkgs;
-					extraSpecialArgs = {
-						inherit inputs system;
-					};
-					modules = [
-						./home-manager/home.nix
-						nixvim.homeModules.nixvim
-						nixcord.homeModules.nixcord
-						inputs.spicetify-nix.homeManagerModules.default
-					];
-				};
+			homeConfigurations.mafien0 = home-manager.lib.homeManagerConfiguration {
+				modules = [
+					./home-manager/home.nix
+					nixvim.homeModules.nixvim
+					nixcord.homeModules.nixcord
+					inputs.spicetify-nix.homeManagerModules.default
+				];
+				extraSpecialArgs = { inherit inputs system; };
+				inherit pkgs;
+
 			};
 		};
 }

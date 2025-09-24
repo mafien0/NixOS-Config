@@ -1,4 +1,5 @@
-{
+{ pkgs, ... }: {
+
 	programs.nixvim = {
 		lsp.servers = {
 			bashls.enable = true;         # Bash
@@ -14,7 +15,6 @@
 
 		plugins.lsp = {
 			enable = true;
-			inlayHints = true;
 		};
 
 		keymaps = [

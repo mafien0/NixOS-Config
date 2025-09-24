@@ -15,6 +15,7 @@
 	home.pointerCursor = {
 		package = pkgs.volantes-cursors;
 		name = "volantes_cursors";
+		size = 24;
 		gtk.enable = true;
 		x11.enable = true;
 		x11.defaultCursor = "left_ptr";

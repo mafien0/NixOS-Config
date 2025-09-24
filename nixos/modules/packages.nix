@@ -5,7 +5,8 @@
 		dconf-editor
 
 		# Desktop apps
-		obs-studio
+		galaxy-buds-client
+		logseq
 		telegram-desktop
 		bitwarden-desktop
 		zapzap
@@ -22,6 +23,7 @@
 		cava
 		curl
 		dig
+		nmap
 		fastfetch
 		ffmpeg
 		fzf
@@ -42,18 +44,38 @@
 		sl
 
 		# Other
+		altserver-linux
+		libimobiledevice
 		home-manager
 		steam-run
 		gcc
 		jdk
+
+		# Obs
+		obs-studio
+		obs-studio-plugins.obs-pipewire-audio-capture
 
 		# Prismlauncher
 		(prismlauncher.override {
 			additionalPrograms = [ ffmpeg ];
 			jdks = [ graalvm-ce zulu8 zulu17 zulu ];
 		})
+
 	];
 
+
+	# Steam
+	programs.steam = {
+		enable = true;
+		remotePlay.openFirewall = true;
+		dedicatedServer.openFirewall = true;
+	};
+
+
+	# Alt server
+	services.usbmuxd.enable = true;
+
+	# Fonts
 	fonts.packages = with pkgs; [
 		dina-font
 		fira-code

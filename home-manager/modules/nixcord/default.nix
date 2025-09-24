@@ -3,6 +3,10 @@
 		enable = true;
 		vesktop.enable = true;
 
+		config.themeLinks = [
+			"https://croissantdunord.github.io/discord-adblock/adblock.css" # Adblock
+		];
+
 		config.plugins = {
 			experiments.enable = true;
 			callTimer.enable = true;

@@ -12,6 +12,18 @@
 	hardware.alsa.enablePersistence = true;
 	security.rtkit.enable = true;
 
+	hardware.bluetooth = {
+		enable = true;
+		powerOnBoot = true;
+		settings = {
+			Policy.AutoEnable = true;
+			General = {
+				Experimental = true;
+				FastConnectable = true;
+			};
+		};
+	};
+
 	environment.systemPackages = with pkgs; [
 		paprefs
 		pasystray

@@ -17,13 +17,17 @@
 			"x-scheme-handler/http" = "firefox.desktop";
 			"x-scheme-handler/https" = "firefox.desktop";
 
-			# Eog
-			"image/png" = "org.gnome.eog.desktop";
-			"image/jpeg" = "org.gnome.eog.desktop";
-			"image/jpg" = "org.gnome.eog.desktop";
-			"image/gif" = "org.gnome.eog.desktop";
-			"image/bmp" = "org.gnome.eog.desktop";
-			"image/svg+xml" = "org.gnome.eog.desktop";
+			# Images
+			"image/png" = "org.gnome.Loupe.desktop";
+			"image/jpeg" = "org.gnome.Loupe.desktop";
+			"image/jpg" = "org.gnome.Loupe.desktop";
+			"image/gif" = "org.gnome.Loupe.desktop";
+			"image/bmp" = "org.gnome.Loupe.desktop";
+			"image/svg+xml" = "org.gnome.Loupe.desktop";
+			"image/webp" = "org.gnome.Loupe.desktop";
+			"image/tiff" = "org.gnome.Loupe.desktop";
+			"image/x-png" = "org.gnome.Loupe.desktop";
+			"image/vnd.microsoft.icon" = "org.gnome.Loupe.desktop";
 
 			# Mpv
 			"video/mp4" = "mpv.desktop";
