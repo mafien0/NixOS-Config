@@ -5,12 +5,6 @@
 		./defaultapps.nix
 	];
 
-
-	# Wallpaper
-	home.file."Pictures/wallpaper.jxl".source = ./wallpaper.jxl;
-	dconf.settings."org/gnome/desktop/background".picture-uri      = "file://${config.home.homeDirectory}/Pictures/wallpaper.jxl";
-	dconf.settings."org/gnome/desktop/background".picture-uri-dark = "file://${config.home.homeDirectory}/Pictures/wallpaper.jxl";
-
 	# Cursor
 	home.pointerCursor = {
 		package = pkgs.volantes-cursors;

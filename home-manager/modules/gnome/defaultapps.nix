@@ -14,9 +14,9 @@
 
 			"text/plain" = "org.gnome.gedit.desktop";
 
-			"image/jpeg" = "org.gnome.eog.desktop";
-			"image/png" = "org.gnome.eog.desktop";
-			"image/gif" = "org.gnome.eog.desktop";
+			"image/jpeg" = "org.gnome.Loupe.desktop";
+			"image/png" = "org.gnome.Loupe.desktop";
+			"image/gif" = "org.gnome.Loupe.desktop";
 
 			"video/mp4" = "mpv.desktop";
 			"video/x-msvideo" = "mpv.desktop";
