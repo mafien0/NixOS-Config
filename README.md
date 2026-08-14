@@ -1,6 +1,11 @@
 ## For those who came for hyprland config
 Look for <https://github.com/mafien0/NixOS-Hyprland>
 
+## For those who came for a newer config
+Look for <https://codeberg.org/mafien0/dotfiles>
+
+# Outdated config
+
 # Preview
 
 <table>
